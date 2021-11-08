@@ -15,7 +15,6 @@ namespace ConsoleApp1
             book1.Content = "Konoplia gondon ebaniy. Sob on zdoh!";
             book1.Author = "I";
             book1.Title = "KONOPLIA GONDON EBANIY";
-            
             book1.PrintInfo();
             // Task 4
             Figure trFigure = new Figure(0, 0, 1, 0, 1, 0);
