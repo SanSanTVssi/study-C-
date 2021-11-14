@@ -4,7 +4,7 @@ namespace Lesson4_abstaction
 {
     public class Player : IPlayable, IRecodable
     {
-        void IRecodable.Record()
+        public void Record()
         {
             Console.WriteLine("Recording");
         }
@@ -27,7 +27,7 @@ namespace Lesson4_abstaction
             Console.WriteLine("Stop recording");
         }
 
-        void IPlayable.Play()
+        public void Play()
         {
             Console.WriteLine("Play record");
         }
