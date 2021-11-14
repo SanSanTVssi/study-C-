@@ -4,40 +4,30 @@ namespace Lesson4_abstaction
 {
     public class Player : IPlayable, IRecodable
     {
-        private bool isRecording = false;
-
-        public void Record()
+        void IRecodable.Record()
         {
-            isRecording = true;
             Console.WriteLine("Recording");
         }
 
-        public void Pause()
+        void IRecodable.Pause()
         {
-            if (isRecording)
-            {
-                Console.WriteLine("Pause recording");
-            }
-            else
-            {
-                Console.WriteLine("Pause video");
-            }
+            Console.WriteLine("Pause recording");
+        }
+        
+        void IPlayable.Pause()
+        {
+            Console.WriteLine("Pause video");
+        }
+        void IPlayable.Stop()
+        {
+            Console.WriteLine("Stop video");
+        }
+        void IRecodable.Stop()
+        {
+            Console.WriteLine("Stop recording");
         }
 
-        public void Stop()
-        {
-            if (isRecording)
-            {
-                isRecording = false;
-                Console.WriteLine("Stop recording");
-            }
-            else
-            {
-                Console.WriteLine("Stop video");
-            }
-        }
-
-        public void Play()
+        void IPlayable.Play()
         {
             Console.WriteLine("Play record");
         }
